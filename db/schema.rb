@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_01_21_173737) do
   end
 
   create_table "videos", force: :cascade do |t|
-    t.string "url"
+    t.string "youtube_id"
     t.string "name"
     t.string "description"
     t.string "instructor"
