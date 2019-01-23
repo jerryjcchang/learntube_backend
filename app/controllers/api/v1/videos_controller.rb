@@ -8,6 +8,7 @@ class Api::V1::VideosController < ApplicationController
 	  render json: Video.find(params[:id])
 	end
 
+
  # Post request
 	def create
 	  render json: Video.create(strong_params)
