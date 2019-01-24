@@ -22,4 +22,14 @@ class Api::V1::UsersController < ApplicationController
 		end
 	end
 
+	def remove_video
+		UsersVideo.find_by(user_id: params[:user_id], video_id: params[:video_id]).delete
+		render json: Video.find(params[:video_id]).id
+	end
+
+	private
+	def strong_params
+		params.require(:user).permit(:name, :username, :first_name,
+		 :last_name, :status)
+	end
 end
