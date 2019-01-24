@@ -8,24 +8,18 @@ class Api::V1::UsersController < ApplicationController
 	  render json: User.find(params[:id])
 	end
 
-	def create
-	  render json: User.create(strong_params)
-	end
 
 	def update
-		User.find(params[:id]).update(strong_params)
+		User.find(params[:id]).update(params)
 		render json: User.find(params[:id])
 	end
 
-	def destroy
-		render json: User.find(params[:id]).destroy
-	end
-
-	private
-
-	def strong_params
-		params.require(:user).permit(:name, :username, :first_name,
-		 :last_name, :status)
+	def add_video
+		# byebug
+		if !User.find(params[:user_id]).videos.include?(Video.find(params[:video_id]))
+			User.find(params[:user_id]).videos << Video.find(params[:video_id])
+			render json: User.find(params[:user_id]).videos.find(params[:video_id])
+		end
 	end
 
 end
