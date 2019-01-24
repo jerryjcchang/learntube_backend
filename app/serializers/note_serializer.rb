@@ -1,5 +1,5 @@
 class NoteSerializer < ActiveModel::Serializer
-  attributes :id, :video_id, :content
+  attributes :id, :user_id, :video_id, :timestamp, :content
   belongs_to :video
   belongs_to :user
 end
