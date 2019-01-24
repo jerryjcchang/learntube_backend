@@ -9,7 +9,7 @@
 Ash = User.find_or_create_by(username: "Ash", first_name: "Ashley", last_name: "Zaki", status: "student")
 JC = User.find_or_create_by(username: "jerryjcchang", first_name: "JC", last_name: "Chang", status: "student")
 Robin = User.find_or_create_by(username: "robin", first_name: "Robin", last_name: "Kim", status: "student")
-Vlad = User.find_or_create_by(username: "vladydaddy", first_name: "Vlad", last_name: "Chang", status: "student")
+Vlad = User.find_or_create_by(username: "vladydaddy", first_name: "Vlad", last_name: "Deryuzhenko", status: "student")
 Anuj = User.find_or_create_by(username: "papanuj", first_name: "Anuj", last_name: "Sharma", status: "student")
 Mandy = User.find_or_create_by(username: "mandy", first_name: "Mandy", last_name: "Pilaud", status: "student")
 Joe = User.find_or_create_by(username: "joe", first_name: "Joe", last_name: "Spinelli", status: "student")
