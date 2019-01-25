@@ -56,3 +56,8 @@ vid4 = UsersVideo.find_or_create_by(user_id: 3, video_id: 6)
 vid5 = UsersVideo.find_or_create_by(user_id: 5, video_id: 6)
 vid6 = UsersVideo.find_or_create_by(user_id: 6, video_id: 1)
 vid7 = UsersVideo.find_or_create_by(user_id: 4, video_id: 3)
+
+note1 = Note.find_or_create_by(user_id: 2, video_id: 1, timestamp: 30, content: "create Pokemon")
+note2 = Note.find_or_create_by(user_id: 2, video_id: 1, timestamp: 15, content: "connect API")
+note3 = Note.find_or_create_by(user_id: 1, video_id: 2, timestamp: 7, content: "Paul making funny joke")
+note4 = Note.find_or_create_by(user_id: 1, video_id: 2, timestamp: 20, content: "Paul making funny face")
