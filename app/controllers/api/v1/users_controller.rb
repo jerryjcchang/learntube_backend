@@ -15,7 +15,6 @@ class Api::V1::UsersController < ApplicationController
 	end
 
 	def add_video
-		# byebug
 		if !User.find(params[:user_id]).videos.include?(Video.find(params[:video_id]))
 			User.find(params[:user_id]).videos << Video.find(params[:video_id])
 			render json: User.find(params[:user_id]).videos.find(params[:video_id])

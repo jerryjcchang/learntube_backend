@@ -9,10 +9,10 @@
 Ash = User.find_or_create_by(username: "Ash", first_name: "Ashley", last_name: "Zaki", status: "student")
 JC = User.find_or_create_by(username: "jerryjcchang", first_name: "JC", last_name: "Chang", status: "student")
 Robin = User.find_or_create_by(username: "robin", first_name: "Robin", last_name: "Kim", status: "student")
-Vlad = User.find_or_create_by(username: "vladydaddy", first_name: "Vlad", last_name: "Deryuzhenko", status: "student")
+Vlad = User.find_or_create_by(username: "vladdydaddy", first_name: "Vlad", last_name: "Deryuzhenko", status: "student")
 Anuj = User.find_or_create_by(username: "papanuj", first_name: "Anuj", last_name: "Sharma", status: "student")
 Mandy = User.find_or_create_by(username: "mandy", first_name: "Mandy", last_name: "Pilaud", status: "student")
-Joe = User.find_or_create_by(username: "joe", first_name: "Joe", last_name: "Spinelli", status: "student")
+Joe = User.find_or_create_by(username: "joespinelli7", first_name: "Joe", last_name: "Spinelli", status: "student")
 Rachel = User.find_or_create_by(username: "rachel", first_name: "Rachel", last_name: "Novick", status: "student")
 Kiley = User.find_or_create_by(username: "kiley", first_name: "Kiley", last_name: "Bobbitt", status: "student")
 Shinik = User.find_or_create_by(username: "shinik", first_name: "Shinik", last_name: "Cupo", status: "student")
@@ -21,7 +21,7 @@ Ben = User.find_or_create_by(username: "ben", first_name: "Benjamin", last_name:
 Beau = User.find_or_create_by(username: "beau", first_name: "Beau", last_name: "Jepson", status: "student")
 
 Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Chang", status: "instructor")
-Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Doung", status: "instructor")
+Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Duong", status: "instructor")
 Will = User.find_or_create_by(username: "will", first_name: "Will", last_name: "Ley", status: "instructor")
 Bruno = User.find_or_create_by(username: "bruno", first_name: "Bruno", last_name: "Garcia", status: "instructor")
 
