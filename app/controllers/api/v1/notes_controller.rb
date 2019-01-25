@@ -17,6 +17,11 @@ class Api::V1::NotesController < ApplicationController
 		render json: Note.find(params[:id])
 	end
 
+	def get_notes_by_user_video
+		# render json: Note.find(params[:user_id], params[:video_id])
+		render json: Note.where("user_id = ? AND video_id = ?", params[:user_id], params[:video_id])
+	end
+
 	private
 
 	def strong_params

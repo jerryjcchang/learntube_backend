@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users, :videos, :notes
       patch '/users/:user_id/videos/add', to: 'users#add_video'
       delete '/users/:user_id/videos/remove', to: 'users#remove_video'
+      get   '/notes/:user_id/:video_id', to: 'notes#get_notes_by_user_video'
     end
   end
 end
