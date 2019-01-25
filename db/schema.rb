@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_174025) do
+ActiveRecord::Schema.define(version: 2019_01_25_181654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "notes", force: :cascade do |t|
-    t.integer "timestamp"
+    t.string "timestamp"
     t.text "content"
     t.integer "video_id"
     t.datetime "created_at", null: false

@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Ash = User.find_or_create_by(username: "Ash", first_name: "Ashley", last_name: "Zaki", status: "student")
-JC = User.find_or_create_by(username: "jerryjcchang", first_name: "JC", last_name: "Chang", status: "student")
+Ash = User.find_or_create_by(username: "ash", first_name: "Ashley", last_name: "Zaki", status: "student")
+JC = User.find_or_create_by(username: "jc", first_name: "JC", last_name: "Chang", status: "student")
 Robin = User.find_or_create_by(username: "robin", first_name: "Robin", last_name: "Kim", status: "student")
 Vlad = User.find_or_create_by(username: "vladdydaddy", first_name: "Vlad", last_name: "Deryuzhenko", status: "student")
 Anuj = User.find_or_create_by(username: "papanuj", first_name: "Anuj", last_name: "Sharma", status: "student")
@@ -20,7 +20,7 @@ Jonnel = User.find_or_create_by(username: "jonnel", first_name: "Jonnel", last_n
 Ben = User.find_or_create_by(username: "ben", first_name: "Benjamin", last_name: "Addai", status: "student")
 Beau = User.find_or_create_by(username: "beau", first_name: "Beau", last_name: "Jepson", status: "student")
 
-Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Chang", status: "instructor")
+Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Nicholsen", status: "instructor")
 Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Duong", status: "instructor")
 Will = User.find_or_create_by(username: "will", first_name: "Will", last_name: "Ley", status: "instructor")
 Bruno = User.find_or_create_by(username: "bruno", first_name: "Bruno", last_name: "Garcia", status: "instructor")
@@ -56,8 +56,3 @@ vid4 = UsersVideo.find_or_create_by(user_id: 3, video_id: 6)
 vid5 = UsersVideo.find_or_create_by(user_id: 5, video_id: 6)
 vid6 = UsersVideo.find_or_create_by(user_id: 6, video_id: 1)
 vid7 = UsersVideo.find_or_create_by(user_id: 4, video_id: 3)
-
-note1 = Note.find_or_create_by(user_id: 2, video_id: 1, timestamp: 30, content: "create Pokemon")
-note2 = Note.find_or_create_by(user_id: 2, video_id: 1, timestamp: 15, content: "connect API")
-note3 = Note.find_or_create_by(user_id: 1, video_id: 2, timestamp: 7, content: "Paul making funny joke")
-note4 = Note.find_or_create_by(user_id: 1, video_id: 2, timestamp: 20, content: "Paul making funny face")
