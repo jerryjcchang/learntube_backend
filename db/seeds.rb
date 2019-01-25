@@ -21,7 +21,7 @@ Ben = User.find_or_create_by(username: "ben", first_name: "Benjamin", last_name:
 Beau = User.find_or_create_by(username: "beau", first_name: "Beau", last_name: "Jepson", status: "student")
 
 Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Chang", status: "instructor")
-Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Doung", status: "instructor")
+Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Duong", status: "instructor")
 Will = User.find_or_create_by(username: "will", first_name: "Will", last_name: "Ley", status: "instructor")
 Bruno = User.find_or_create_by(username: "bruno", first_name: "Bruno", last_name: "Garcia", status: "instructor")
 
