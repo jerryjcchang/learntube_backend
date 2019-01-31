@@ -20,6 +20,9 @@ Jonnel = User.find_or_create_by(username: "jonnel", first_name: "Jonnel", last_n
 Ben = User.find_or_create_by(username: "ben", first_name: "Benjamin", last_name: "Addai", status: "student")
 Beau = User.find_or_create_by(username: "beau", first_name: "Beau", last_name: "Jepson", status: "student")
 
+# Update User Info
+User.find(15).update(username: "tduong37")
+
 Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Nicholsen", status: "instructor")
 Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Duong", status: "instructor")
 Will = User.find_or_create_by(username: "will", first_name: "Will", last_name: "Ley", status: "instructor")
