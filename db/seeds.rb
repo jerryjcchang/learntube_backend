@@ -20,10 +20,10 @@ Jonnel = User.find_or_create_by(username: "jonnel", first_name: "Jonnel", last_n
 Ben = User.find_or_create_by(username: "ben", first_name: "Benjamin", last_name: "Addai", status: "student")
 Beau = User.find_or_create_by(username: "beau", first_name: "Beau", last_name: "Jepson", status: "student")
 
-Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Nicholsen", status: "instructor")
+# Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Nicholsen", status: "instructor")
 # Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Duong", status: "instructor")
 # Will = User.find_or_create_by(username: "will", first_name: "Will", last_name: "Ley", status: "instructor")
-Bruno = User.find_or_create_by(username: "bruno", first_name: "Bruno", last_name: "Garcia", status: "instructor")
+# Bruno = User.find_or_create_by(username: "bruno", first_name: "Bruno", last_name: "Garcia", status: "instructor")
 
 User.find_by(username: "will").update(username: "wley3337")
 User.find_by(username: "paul").update(username: "pnicholsen")
