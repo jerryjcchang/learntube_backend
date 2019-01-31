@@ -21,11 +21,11 @@ Ben = User.find_or_create_by(username: "ben", first_name: "Benjamin", last_name:
 Beau = User.find_or_create_by(username: "beau", first_name: "Beau", last_name: "Jepson", status: "student")
 
 Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Nicholsen", status: "instructor")
-Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Duong", status: "instructor")
+# Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Duong", status: "instructor")
 Will = User.find_or_create_by(username: "will", first_name: "Will", last_name: "Ley", status: "instructor")
 Bruno = User.find_or_create_by(username: "bruno", first_name: "Bruno", last_name: "Garcia", status: "instructor")
 
-User.find_by(username: "ann").destroy
+User.find_by(username: "ann").update(username: "jerryjcchang")
 
 # Mod 1
 Lecture01 = Video.find_or_create_by(name: "Lecture 01 - Hashketball review", description: "Ruby Hashketball review", instructor: "Paul", youtube_id: "MoEwvrb-rHg", length: 60, category: "Mod 1")
