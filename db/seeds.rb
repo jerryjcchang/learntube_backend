@@ -25,9 +25,9 @@ Beau = User.find_or_create_by(username: "beau", first_name: "Beau", last_name: "
 # Will = User.find_or_create_by(username: "will", first_name: "Will", last_name: "Ley", status: "instructor")
 # Bruno = User.find_or_create_by(username: "bruno", first_name: "Bruno", last_name: "Garcia", status: "instructor")
 
-User.find_by(username: "will").update(username: "wley3337")
-User.find_by(username: "paul").update(username: "pnicholsen")
-User.find_by(username: "bruno").update(username: "bgarcia")
+# User.find_by(username: "will").update(username: "wley3337")
+# User.find_by(username: "paul").update(username: "pnicholsen")
+# User.find_by(username: "bruno").update(username: "bgarcia")
 
 # Mod 1
 Lecture01 = Video.find_or_create_by(name: "Lecture 01 - Hashketball review", description: "Ruby Hashketball review", instructor: "Paul", youtube_id: "MoEwvrb-rHg", length: 60, category: "Mod 1")
@@ -79,10 +79,13 @@ Lecture39a = Video.find_or_create_by(name: "Part 1 - Rails API", description: "R
 Lecture39b = Video.find_or_create_by(name: "Part 2 - Rails API", description: "Rails API - Part 2", instructor: "Ann", youtube_id: "9PZ8CPi0Ct8", length: 48, category: "Mod 3")
 
 
-vid1 = UsersVideo.find_or_create_by(user_id: 1, video_id: 2)
-vid2 = UsersVideo.find_or_create_by(user_id: 1, video_id: 1)
-vid3 = UsersVideo.find_or_create_by(user_id: 2, video_id: 2)
-vid4 = UsersVideo.find_or_create_by(user_id: 3, video_id: 6)
-vid5 = UsersVideo.find_or_create_by(user_id: 5, video_id: 6)
-vid6 = UsersVideo.find_or_create_by(user_id: 6, video_id: 1)
-vid7 = UsersVideo.find_or_create_by(user_id: 4, video_id: 3)
+# vid1 = UsersVideo.find_or_create_by(user_id: 1, video_id: 2)
+# vid2 = UsersVideo.find_or_create_by(user_id: 1, video_id: 1)
+# vid3 = UsersVideo.find_or_create_by(user_id: 2, video_id: 2)
+# vid4 = UsersVideo.find_or_create_by(user_id: 3, video_id: 6)
+# vid5 = UsersVideo.find_or_create_by(user_id: 5, video_id: 6)
+# vid6 = UsersVideo.find_or_create_by(user_id: 6, video_id: 1)
+# vid7 = UsersVideo.find_or_create_by(user_id: 4, video_id: 3)
+
+Video.find(54).delete
+Video.find(55).delete
