@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+cohort = Cohort.find_or_create_by(name: "DC-Web-111918")
+
 Ash = User.find_or_create_by(username: "ash", first_name: "Ashley", last_name: "Zaki", status: "student")
 JC = User.find_or_create_by(username: "jc", first_name: "JC", last_name: "Chang", status: "student")
 Robin = User.find_or_create_by(username: "robin", first_name: "Robin", last_name: "Kim", status: "student")
@@ -20,6 +22,10 @@ Jonnel = User.find_or_create_by(username: "jonnel", first_name: "Jonnel", last_n
 Ben = User.find_or_create_by(username: "ben", first_name: "Benjamin", last_name: "Addai", status: "student")
 Beau = User.find_or_create_by(username: "beau", first_name: "Beau", last_name: "Jepson", status: "student")
 
+User.all.each do |user|
+  if !cohort.users.includes(user)
+  cohort.users << user
+end
 # Paul = User.find_or_create_by(username: "paul", first_name: "Paul", last_name: "Nicholsen", status: "instructor")
 # Ann = User.find_or_create_by(username: "ann", first_name: "Ann", last_name: "Duong", status: "instructor")
 # Will = User.find_or_create_by(username: "will", first_name: "Will", last_name: "Ley", status: "instructor")
@@ -78,7 +84,10 @@ Lecture36c = Video.find_or_create_by(name: "Part 3 - Toy-Review", description: "
 Lecture39a = Video.find_or_create_by(name: "Part 1 - Rails API", description: "Rails API - Part 1", instructor: "Ann", youtube_id: "DBX9eWBU1O4", length: 44, category: "Mod 3")
 Lecture39b = Video.find_or_create_by(name: "Part 2 - Rails API", description: "Rails API - Part 2", instructor: "Ann", youtube_id: "9PZ8CPi0Ct8", length: 48, category: "Mod 3")
 
-
+Video.all.each do |video|
+  if !cohort.videos.includes(video)
+  cohort.videos << video
+end
 # vid1 = UsersVideo.find_or_create_by(user_id: 1, video_id: 2)
 # vid2 = UsersVideo.find_or_create_by(user_id: 1, video_id: 1)
 # vid3 = UsersVideo.find_or_create_by(user_id: 2, video_id: 2)
@@ -86,6 +95,3 @@ Lecture39b = Video.find_or_create_by(name: "Part 2 - Rails API", description: "R
 # vid5 = UsersVideo.find_or_create_by(user_id: 5, video_id: 6)
 # vid6 = UsersVideo.find_or_create_by(user_id: 6, video_id: 1)
 # vid7 = UsersVideo.find_or_create_by(user_id: 4, video_id: 3)
-
-Video.find(54).delete
-Video.find(55).delete
