@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       patch '/users/:user_id/videos/add', to: 'users#add_video'
       delete '/users/:user_id/videos/remove', to: 'users#remove_video'
       get   '/notes/:user_id/:video_id', to: 'notes#get_notes_by_user_video'
+      post '/profile', to: 'sessions#get_user'
+      post '/token', to: 'sessions#get_token'
     end
   end
 end

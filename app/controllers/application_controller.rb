@@ -9,7 +9,8 @@ def encode(payload)
 end
 
 def decode(token)
-  JWT.decode(token, secret_key, true, {algorith: "HS256"})[0]
+  decode = JWT.decode(token, secret_key, true, {algorith: "HS256"})[0]
+  User.find(decode["user_id"])
 end
 
 end

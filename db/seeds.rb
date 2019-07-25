@@ -85,7 +85,7 @@ Lecture39a = Video.find_or_create_by(name: "Part 1 - Rails API", description: "R
 Lecture39b = Video.find_or_create_by(name: "Part 2 - Rails API", description: "Rails API - Part 2", instructor: "Ann", youtube_id: "9PZ8CPi0Ct8", length: 48, category: "Mod 3")
 
 Video.all.each do |video|
-  if !cohort.videos.includes(video)
+  if cohort.videos.exclude?(video)
   cohort.videos << video
 end
 # vid1 = UsersVideo.find_or_create_by(user_id: 1, video_id: 2)
