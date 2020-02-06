@@ -11,7 +11,9 @@ class Api::V1::VideosController < ApplicationController
 
  # Post request
 	def create
-	  render json: Video.create(strong_params)
+		vid = Video.new(strong_params)
+		vid.cohord_id = 1
+	  render json: Video.save
 	end
 
 	def update
