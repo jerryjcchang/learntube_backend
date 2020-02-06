@@ -15,7 +15,7 @@ class Api::V1::SessionsController < ApplicationController
       # byebug
       user.update(git_token: git_token)
       token = encode({user_id: user.id})
-      render json: { token: token, user: parsed_user}
+      render json: { token: token, user: parsed_user, videos: user.cohort.videos}
     end
 
   def get_user
@@ -25,7 +25,7 @@ class Api::V1::SessionsController < ApplicationController
     git_token = user.git_token
     user_data = RestClient.get('https://api.github.com/user', {Authorization: "token #{git_token}"})
     parsed_user = JSON.parse(user_data)
-    render json: parsed_user
+    render json: { user: parsed_user, videos: user.cohort.videos}
   end
 
 end
